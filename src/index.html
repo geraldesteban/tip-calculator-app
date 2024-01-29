@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./controller.js" defer></script>
+
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Tip Calculator App</title>
+  </head>
+  <body class="bg-lighGrayishCyan">
+    <div class="card__container flex justify-center h-screen items-center">
+      <div class="card">
+        <div class="card__title text-center mb-16">
+          <h2
+            class="card__title--name text-veryDarkCyan text-2xl font-bold tracking-[0.5rem]"
+          >
+            SPLI
+          </h2>
+          <h2
+            class="card__title--name text-veryDarkCyan text-2xl font-bold tracking-[0.5rem]"
+          >
+            TTER
+          </h2>
+        </div>
+        <div
+          class="card__calculator flex justify-center bg-white w-full flex-wrap rounded-xl p-8 max-lg:w-[30rem] max-md:w-[22rem]"
+        >
+          <div class="card__input mr-5 max-lg:mr-0 max-lg:mb-10">
+            <div class="card__input--bill mb-5">
+              <label
+                for="bill"
+                class="text-veryDarkCyan text-xl font-semibold max-md:text-base"
+                >Bill</label
+              >
+              <br />
+              <input
+                class="inputs outline-none text-right bg-veryLightGrayishCyan w-full h-10 rounded-sm mt-3 pr-5 text-xl text-veryDarkCyan"
+                type="number"
+                id="bill"
+                placeholder="0"
+              />
+            </div>
+            <div class="card__input--selectTip mb-5">
+              <label
+                for="tip"
+                class="text-veryDarkCyan text-xl font-semibold max-md:text-base"
+                >Select Tip %</label
+              >
+              <div class="card__input--tips flex mt-3 flex-wrap">
+                <button
+                  class="card__input--btn bg-veryDarkCyan mr-3 mb-3 h-10 w-24 rounded-lg text-white font-bold"
+                >
+                  5%
+                </button>
+                <button
+                  class="card__input--btn bg-veryDarkCyan mr-3 mb-3 h-10 w-24 rounded-lg text-white font-bold"
+                >
+                  10%
+                </button>
+                <button
+                  class="card__input--btn bg-veryDarkCyan mb-3 h-10 w-24 rounded-lg text-white font-bold"
+                >
+                  15%
+                </button>
+              </div>
+              <div class="card__input--tips flex">
+                <button
+                  class="card__input--btn bg-veryDarkCyan mr-3 h-10 w-24 rounded-lg text-white font-bold"
+                >
+                  25%
+                </button>
+                <button
+                  class="card__input--btn bg-veryDarkCyan mr-3 h-10 w-24 rounded-lg text-white font-bold"
+                >
+                  50%
+                </button>
+                <input
+                  class="inputs outline-none h-10 w-24 bg-veryLightGrayishCyan rounded-lg text-center font-bold placeholder-veryDarkCyan text-veryDarkCyan"
+                  type="number"
+                  id="custom"
+                  placeholder="Custom"
+                />
+              </div>
+            </div>
+            <div class="card__input--numPeople">
+              <label
+                for="people"
+                class="text-veryDarkCyan text-xl font-semibold max-md:text-base"
+                >Number of People</label
+              >
+              <br />
+              <input
+                class="inputs outline-none text-right bg-veryLightGrayishCyan w-full h-10 rounded-sm mt-3 pr-5 text-xl text-veryDarkCyan"
+                type="number"
+                id="people"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div
+            class="card__result bg-veryDarkCyan ml-5 p-10 rounded-lg max-lg:ml-0 max-md:p-10"
+          >
+            <div class="card__amount flex justify-between items-center mb-10">
+              <div class="card__label mr-10">
+                <h2
+                  class="card__label--title text-xl font-semibold text-white max-md:text-base"
+                >
+                  Tip Amount
+                </h2>
+                <p
+                  class="card__label--person text-grayishCyan font-semibold max-md:text-sm"
+                >
+                  / person
+                </p>
+              </div>
+              <p
+                class="card__tipAmount text-5xl text-strongCyan ml-10 max-md:text-3xl"
+              >
+                $0.00
+              </p>
+            </div>
+            <div class="card__amount flex justify-between items-center mb-20">
+              <div class="card__label mr-10">
+                <h2
+                  class="card__label--title text-xl font-semibold text-white max-md:text-base"
+                >
+                  Total
+                </h2>
+                <p
+                  class="card__label--person text-grayishCyan font-semibold max-md:text-sm"
+                >
+                  / person
+                </p>
+              </div>
+              <p
+                class="card__total text-5xl text-strongCyan ml-10 max-md:text-3xl"
+              >
+                $0.00
+              </p>
+            </div>
+            <button
+              class="card__result--reset bg-grayishCyan active:bg-lighGrayishCyan w-full rounded-md py-2 text-veryDarkCyan"
+            >
+              RESET
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

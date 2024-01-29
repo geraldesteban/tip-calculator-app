@@ -1,0 +1,8 @@
+.DS_Store
+.parcel-cache
+design
+dist
+images
+node_modules
+README-template.md
+style-guide.md
